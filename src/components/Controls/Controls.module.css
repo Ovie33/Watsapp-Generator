@@ -1,0 +1,64 @@
+.controlsBox {
+  background: #2f4858;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px 20px;
+}
+.controlHeader {
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.controlInput {
+  padding: 3px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.controlInput:focus {
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+.controlInput::placeholder {
+  padding: 10px;
+}
+.controlControls {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.controlSenderBtn {
+  font-size: 15px;
+  margin-right: 5px;
+  color: #fff;
+}
+.controlSenderBtn input {
+  margin-right: 4px;
+  cursor: pointer;
+}
+.controlReciverBtn {
+  font-size: 15px;
+  margin-right: 5px;
+  color: #fff;
+}
+.controlReciverBtn input {
+  margin-right: 4px;
+  cursor: pointer;
+}
+.icon {
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+.controlBtn {
+  background: #5d8f92;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+}
