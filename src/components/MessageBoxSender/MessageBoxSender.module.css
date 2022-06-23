@@ -1,0 +1,45 @@
+.messageBoxSender {
+  position: relative;
+  background: #025146;
+  padding: 15px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  max-width: fit-content;
+  float: right;
+  margin-top: 40px;
+}
+
+.messageBoxSender::before {
+  content: "";
+  --size: 10px;
+  width: 0;
+  height: 0;
+  border-top: var(--size) solid #025146;
+  border-right: var(--size) solid transparent;
+  top: 0;
+  right: calc(-1 * var(--size));
+  position: absolute;
+}
+
+.messageBoxSenderText {
+  font-family: "Helvetica Neue", sans-serif;
+  color: #fff;
+}
+.svg {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.messageBoxSenderIcon {
+  width: 15px;
+  height: auto;
+  color: #5e8e8b;
+}
+.messageBoxSenderTime {
+  display: inline;
+  font-size: 10px;
+  color: #a2a2ab;
+  margin-right: 6px;
+}

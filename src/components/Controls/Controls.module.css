@@ -2,49 +2,68 @@
   background: #2f4858;
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 400px;
+  height: fit-content;
   padding: 20px 20px;
 }
 .controlHeader {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-bottom: 10px;
   color: #fff;
+  font-weight: bold;
 }
-.controlInput {
-  padding: 3px;
+.inputContainer {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
   border-radius: 15px;
   margin-bottom: 10px;
+  padding: 4px;
+  padding-right: 12px;
+  justify-content: space-between;
 }
-.controlInput:focus {
+.controlInput {
   outline: none;
   border: none;
-  padding: 5px;
+  font-family: "Poppins";
+  padding-left: 15px;
+  background-color: transparent;
+  width: 80%;
 }
-.controlInput::placeholder {
-  padding: 10px;
+.inputContainer button {
+  --size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: #25d366;
+  border: none;
 }
+
 .controlControls {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  gap: 25px;
   padding: 5px;
 }
 .controlSenderBtn {
   font-size: 15px;
-  margin-right: 5px;
   color: #fff;
 }
 .controlSenderBtn input {
-  margin-right: 4px;
+  margin-right: 5px;
   cursor: pointer;
 }
 .controlReciverBtn {
   font-size: 15px;
-  margin-right: 5px;
   color: #fff;
 }
 .controlReciverBtn input {
-  margin-right: 4px;
+  margin-right: 5px;
   cursor: pointer;
 }
 .icon {
@@ -58,7 +77,8 @@
   border: none;
   cursor: pointer;
   border-radius: 15px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Poppins";
+
   color: #fff;
 }

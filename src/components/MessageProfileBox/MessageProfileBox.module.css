@@ -1,0 +1,36 @@
+.messageProfileBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #171717;
+}
+.svg {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video {
+  margin-right: 10px;
+}
+.profileBox {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  color: #2583f1;
+  font-size: 20px;
+  margin-right: 15px;
+}
+.image {
+  margin-right: 10px;
+  height: 50px;
+}
+.input {
+  font-size: 23px;
+  max-width: 100px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+}
