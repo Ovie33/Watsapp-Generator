@@ -4,36 +4,20 @@ import MessageBox from "./components/MessageBox/MessageBox";
 import { useState } from "react";
 
 function App() {
-  const [messages, setMessages] = useState([
-    {
-      text: "Heyyy, how life my guy",
-      id: 1,
-      owner: "sender",
-    },
-    {
-      text: "Heyyy, how life my guy 2",
-      id: 2,
-      owner: "sender",
-    },
-    {
-      text: "Heyyy, how life my guy 3",
-      id: 3,
-      owner: "sender",
-    },
-    {
-      text: "Heyyy, how life my guy 3",
-      id: 4,
-      owner: "receiver",
-    },
-  ]);
+  const [messages, setMessages] = useState([]);
 
   const [whoIsToSend, setWhoIsToSend] = useState("sender");
 
   return (
     <div className="App">
+      <h2 className="header">WAHATAPP CHAT GENERATOR</h2>
       <div className="flex">
         <MessageBox messages={messages} />
-        <Controls whoIsToSend={whoIsToSend} setWhoIsToSend={setWhoIsToSend} />
+        <Controls
+          whoIsToSend={whoIsToSend}
+          setWhoIsToSend={setWhoIsToSend}
+          setMessages={setMessages}
+        />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import MessageBoxReciver from "../MessageBoxReciver/MessageBoxReciver";
 import MessageBoxSender from "../MessageBoxSender/MessageBoxSender";
 import dark from "./messageBackgroundDark.svg";
 import light from "./messageBackgroundLight.svg";
@@ -14,7 +15,7 @@ function MessageBoxBackground({ messages }) {
         message.owner === "sender" ? (
           <MessageBoxSender key={message.id}>{message.text}</MessageBoxSender>
         ) : (
-          <div key={message.id}></div>
+          <MessageBoxReciver key={message.id}>{message.text}</MessageBoxReciver>
         )
       )}
     </div>

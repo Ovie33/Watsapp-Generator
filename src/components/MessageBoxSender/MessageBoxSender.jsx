@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./MessageBoxSender.module.css";
-import { FaCheck, FaCheckDouble } from "react-icons/fa";
 
 function MessageBoxSender({ children }) {
   return (
@@ -8,7 +7,6 @@ function MessageBoxSender({ children }) {
       <div className={style.messageBoxSenderText}>
         <p>{children}</p>
       </div>
-
       <div className={style.svg}>
         <p className={style.messageBoxSenderTime}>12:07 PM</p>
         <svg

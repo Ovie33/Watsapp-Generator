@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Controls.module.css";
 import { FaEllipsisV } from "react-icons/fa";
 
-function Controls({ setWhoIsToSend, whoIsToSend }) {
+function Controls({ setWhoIsToSend, whoIsToSend, setMessages }) {
+  const [inputText, setInputText] = useState("");
+
+  const onClick = () => {
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      {
+        text: inputText,
+        id: Math.floor(Math.random() * 300),
+        owner: whoIsToSend,
+      },
+    ]);
+    setInputText("");
+  };
+
   return (
     <div className={style.controlsBox}>
       <h4 className={style.controlHeader}>CONTROLS</h4>
@@ -11,8 +25,17 @@ function Controls({ setWhoIsToSend, whoIsToSend }) {
           type="text"
           className={style.controlInput}
           placeholder="Message"
+          value={inputText}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              onClick();
+            }
+          }}
+          onChange={(e) => {
+            setInputText(e.currentTarget.value);
+          }}
         />
-        <button>
+        <button onClick={onClick}>
           <svg
             width="11"
             height="11"
