@@ -16,6 +16,7 @@ function MessageBox({ messages }) {
       <div>
         <MessageBoxBackground messages={messages} />
       </div>
+      <div className={style.blur}></div>
     </div>
   );
 }

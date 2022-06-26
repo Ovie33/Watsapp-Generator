@@ -35,3 +35,7 @@
   color: #a2a2ab;
   margin-right: 6px;
 }
+.optionsBackground {
+  background: red;
+  height: 500px;
+}

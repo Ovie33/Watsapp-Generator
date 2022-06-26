@@ -1,0 +1,20 @@
+.optionsContainer {
+  position: relative;
+  background: #2b2b2c;
+  color: #fff;
+  max-width: fit-content;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 10px;
+  left: 25px;
+}
+.optionsContainer ul {
+  list-style: none;
+}
+.optionsContainer li {
+  cursor: pointer;
+}
+.delete {
+  color: #e85444;
+  margin-bottom: 5px;
+}

@@ -6,6 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
 .flex {
@@ -17,10 +18,10 @@ body {
 .App {
   background: #152128;
   height: 100vh;
-  text-align: center;
 }
 .header {
   padding: 10px;
   color: #fff;
   letter-spacing: 5px;
+  text-align: center;
 }
