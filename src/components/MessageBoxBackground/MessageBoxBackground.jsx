@@ -6,7 +6,7 @@ import light from "./messageBackgroundLight.svg";
 import style from "./MessageBoxBackground.module.css";
 import Blur from "../Blur/Blur";
 
-function MessageBoxBackground({ messages }) {
+function MessageBoxBackground({ messages, setMessages }) {
   const [selectedMessageId, setSelectedMessageId] = useState(0);
 
   return (
@@ -21,6 +21,7 @@ function MessageBoxBackground({ messages }) {
             setSelectedMessageId={setSelectedMessageId}
             key={message.id}
             id={message.id}
+            setMessages={setMessages}
           >
             {message.text}
           </MessageBoxSender>
@@ -30,6 +31,7 @@ function MessageBoxBackground({ messages }) {
             setSelectedMessageId={setSelectedMessageId}
             key={message.id}
             id={message.id}
+            setMessages={setMessages}
           >
             {message.text}
           </MessageBoxReciver>

@@ -2,7 +2,13 @@ import React from "react";
 import Options from "../Options/Options";
 import style from "./MessageBoxSender.module.css";
 
-function MessageBoxSender({ children }) {
+function MessageBoxSender({
+  children,
+  setSelectedMessageId,
+  selectedMessageId,
+  id,
+  setMessages,
+}) {
   return (
     <div className={style.messageBoxSender}>
       <div>

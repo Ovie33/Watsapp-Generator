@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <h2 className="header">WHATSAPP CHAT GENERATOR</h2>
       <div className="flex">
-        <MessageBox messages={messages} />
+        <MessageBox messages={messages} setMessages={setMessages} />
         <Controls
           whoIsToSend={whoIsToSend}
           setWhoIsToSend={setWhoIsToSend}

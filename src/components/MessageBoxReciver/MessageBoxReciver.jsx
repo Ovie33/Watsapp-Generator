@@ -7,6 +7,7 @@ function MessageBoxReciver({
   setSelectedMessageId,
   selectedMessageId,
   id,
+  setMessages,
 }) {
   const [selected, setSelected] = useState(false);
 
@@ -23,13 +24,13 @@ function MessageBoxReciver({
   }, [selected]);
 
   return (
-    <div style={{ zIndex: selectedMessageId === id ? 3 : 1 }}>
-      <div
-        tabIndex={-1}
-        onFocus={handleFocusAndBlur}
-        onBlur={handleFocusAndBlur}
-        className={style.reciverBox}
-      >
+    <div
+      tabIndex={-1}
+      onFocus={handleFocusAndBlur}
+      onBlur={handleFocusAndBlur}
+      style={{ zIndex: selectedMessageId === id ? 3 : 1 }}
+    >
+      <div className={style.reciverBox}>
         <div className={style.reciverText}>
           <p>{children}</p>
         </div>
@@ -37,7 +38,12 @@ function MessageBoxReciver({
           <p className={style.time}>12:07 PM</p>
         </div>
       </div>
-      <Options selected={selected} />
+      <Options
+        setSelectedMessageId={setSelectedMessageId}
+        id={id}
+        setMessages={setMessages}
+        selected={selected}
+      />
     </div>
   );
 }

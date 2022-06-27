@@ -4,7 +4,7 @@ import Blur from "../Blur/Blur";
 import style from "../MessageBox/MessageBox.module.css";
 import MessageBoxBackground from "../MessageBoxBackground/MessageBoxBackground";
 import MessageProfileBox from "../MessageProfileBox/MessageProfileBox";
-function MessageBox({ messages }) {
+function MessageBox({ messages, setMessages }) {
   return (
     <div className={style.messageBoxContainer}>
       <div className={style.messageBoxHeaderContainer}>
@@ -12,7 +12,7 @@ function MessageBox({ messages }) {
         <FaMoon className={style.messageBoxIcon} />
       </div>
       <MessageProfileBox />
-      <MessageBoxBackground messages={messages} />
+      <MessageBoxBackground messages={messages} setMessages={setMessages} />
     </div>
   );
 }
