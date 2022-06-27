@@ -87,7 +87,7 @@ function Controls({ setWhoIsToSend, whoIsToSend, setMessages }) {
               id="reciver"
               name="send"
             />
-            <label htmlFor="reciver">Reciver</label>
+            <label htmlFor="reciver">Receiver</label>
           </div>
           <FaEllipsisV onClick={Display} className={style.icon} />
         </div>

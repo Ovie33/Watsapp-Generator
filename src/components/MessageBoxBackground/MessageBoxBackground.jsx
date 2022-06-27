@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import MessageBoxReciver from "../MessageBoxReciver/MessageBoxReciver";
 import MessageBoxSender from "../MessageBoxSender/MessageBoxSender";
 import dark from "./messageBackgroundDark.svg";
 import light from "./messageBackgroundLight.svg";
 import style from "./MessageBoxBackground.module.css";
+import Blur from "../Blur/Blur";
 
 function MessageBoxBackground({ messages }) {
+  const [selectedMessageId, setSelectedMessageId] = useState(0);
+
   return (
     <div
       className={style.messageBackground}
@@ -13,11 +16,27 @@ function MessageBoxBackground({ messages }) {
     >
       {messages.map((message) =>
         message.owner === "sender" ? (
-          <MessageBoxSender key={message.id}>{message.text}</MessageBoxSender>
+          <MessageBoxSender
+            selectedMessageId={selectedMessageId}
+            setSelectedMessageId={setSelectedMessageId}
+            key={message.id}
+            id={message.id}
+          >
+            {message.text}
+          </MessageBoxSender>
         ) : (
-          <MessageBoxReciver key={message.id}>{message.text}</MessageBoxReciver>
+          <MessageBoxReciver
+            selectedMessageId={selectedMessageId}
+            setSelectedMessageId={setSelectedMessageId}
+            key={message.id}
+            id={message.id}
+          >
+            {message.text}
+          </MessageBoxReciver>
         )
       )}
+
+      <Blur shown={selectedMessageId !== 0} />
     </div>
   );
 }

@@ -1,10 +1,11 @@
 .messageBackground {
-  width: 400px;
-  height: 650px;
+  width: 320px;
+  height: 100%;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-top: 40px;
-  overflow: scroll;
+  overflow: auto;
+  position: relative;
 }

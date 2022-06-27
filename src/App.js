@@ -5,12 +5,11 @@ import { useState } from "react";
 
 function App() {
   const [messages, setMessages] = useState([]);
-
   const [whoIsToSend, setWhoIsToSend] = useState("sender");
 
   return (
     <div className="App">
-      <h2 className="header">WAHATAPP CHAT GENERATOR</h2>
+      <h2 className="header">WHATSAPP CHAT GENERATOR</h2>
       <div className="flex">
         <MessageBox messages={messages} />
         <Controls

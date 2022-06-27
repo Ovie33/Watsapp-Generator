@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaMoon } from "react-icons/fa";
+import Blur from "../Blur/Blur";
 import style from "../MessageBox/MessageBox.module.css";
 import MessageBoxBackground from "../MessageBoxBackground/MessageBoxBackground";
 import MessageProfileBox from "../MessageProfileBox/MessageProfileBox";
@@ -10,13 +11,8 @@ function MessageBox({ messages }) {
         <h3 className={style.messageBoxHeader}>CHAT PREVIEW</h3>
         <FaMoon className={style.messageBoxIcon} />
       </div>
-      <div>
-        <MessageProfileBox />
-      </div>
-      <div>
-        <MessageBoxBackground messages={messages} />
-      </div>
-      <div className={style.blur}></div>
+      <MessageProfileBox />
+      <MessageBoxBackground messages={messages} />
     </div>
   );
 }

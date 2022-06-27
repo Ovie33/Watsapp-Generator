@@ -1,9 +1,12 @@
 import React from "react";
 import style from "./Options.module.css";
 
-function Options({ value }) {
+function Options({ selected }) {
   return (
-    <div className={style.optionsContainer} style={{ display: value }}>
+    <div
+      className={style.optionsContainer}
+      style={{ display: selected ? "block" : "none" }}
+    >
       <div className={style.options}>
         <ul>
           <li className={style.delete}>Delete</li>
