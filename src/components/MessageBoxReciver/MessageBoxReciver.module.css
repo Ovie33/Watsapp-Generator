@@ -38,4 +38,5 @@
 .optionsBackground {
   background: red;
   height: 500px;
+  z-index: 4;
 }

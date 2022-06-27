@@ -25,7 +25,6 @@ function MessageBoxReciver({ children }) {
           <p className={style.time}>12:07 PM</p>
         </div>
       </div>
-      <div className="optionsBackground"></div>
       <Options value={display} />
     </div>
   );

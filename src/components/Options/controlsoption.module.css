@@ -1,0 +1,29 @@
+.controlBox {
+  position: relative;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  max-width: fit-content;
+  top: -195px;
+  left: 240px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.list {
+  list-style: none;
+}
+.list li {
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: #4a4a4a;
+}
+.svg {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-width: 120px;
+  justify-content: space-between;
+}
+.svg svg {
+  width: 15px;
+  height: 15px;
+}
