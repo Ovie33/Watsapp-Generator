@@ -94,7 +94,7 @@ function Controls({ setWhoIsToSend, whoIsToSend, setMessages }) {
         <button className={style.controlBtn}>SAVE IMAGE</button>
       </div>
       <div>
-        <ControlsOptons value={display} />
+        <ControlsOptons value={display} setMessages={setMessages} />
       </div>
     </div>
   );

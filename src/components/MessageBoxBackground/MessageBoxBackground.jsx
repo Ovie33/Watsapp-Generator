@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import MessageBoxReciver from "../MessageBoxReciver/MessageBoxReciver";
 import MessageBoxSender from "../MessageBoxSender/MessageBoxSender";
-import dark from "./messageBackgroundDark.svg";
-import light from "./messageBackgroundLight.svg";
 import style from "./MessageBoxBackground.module.css";
 import Blur from "../Blur/Blur";
 
@@ -12,7 +10,7 @@ function MessageBoxBackground({ messages, setMessages }) {
   return (
     <div
       className={style.messageBackground}
-      style={{ backgroundImage: `url(${dark})` }}
+      // style={{ backgroundImage: `url(${})` }}
     >
       {messages.map((message) =>
         message.owner === "sender" ? (

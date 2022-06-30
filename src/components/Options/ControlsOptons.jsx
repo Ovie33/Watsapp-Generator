@@ -1,13 +1,18 @@
 import React from "react";
 import style from "./controlsoption.module.css";
 
-function ControlsOptons({ value }) {
+function ControlsOptons({ value, setMessages }) {
   return (
     <div>
       <div className={style.controlBox} style={{ display: value }}>
         <ul className={style.list}>
           <li>
-            <div className={style.svg}>
+            <div
+              onClick={() => {
+                setMessages([]);
+              }}
+              className={style.svg}
+            >
               <p>Clear Chat</p>
               <svg
                 width="10"
