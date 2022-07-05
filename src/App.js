@@ -8,18 +8,23 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [whoIsToSend, setWhoIsToSend] = useState("sender");
   const [backgroung, setBackgroung] = useState(dark);
+  const onClick = () => {
+    setBackgroung((prevValue) => (prevValue === dark ? light : dark));
+  };
 
   return (
-    <div className="App">
+    <div className={`App ${backgroung === dark ? "dark" : "light"}`}>
       <h2 className="header">WHATSAPP CHAT GENERATOR</h2>
       <div className="flex">
         <MessageBox
           messages={messages}
           setMessages={setMessages}
           backgroung={backgroung}
+          onClick={onClick}
           setBackgroung={setBackgroung}
         />
         <Controls
+          className="controls"
           whoIsToSend={whoIsToSend}
           setWhoIsToSend={setWhoIsToSend}
           setMessages={setMessages}

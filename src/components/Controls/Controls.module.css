@@ -83,3 +83,17 @@
 
   color: #fff;
 }
+
+@media only screen and (max-width: 600px) {
+  .controlsBox {
+    position: absolute;
+    width: 100%;
+    top: 82%;
+    border-radius: 20px 20px 0px 0px;
+    padding-bottom: 20px;
+    z-index: 2;
+  }
+  .controlHeader {
+    display: none;
+  }
+}

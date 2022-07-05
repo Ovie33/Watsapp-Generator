@@ -1,21 +1,28 @@
-import React, { useState } from "react";
-import { FaMoon } from "react-icons/fa";
+import React from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 import style from "../MessageBox/MessageBox.module.css";
 import MessageBoxBackground from "../MessageBoxBackground/MessageBoxBackground";
 import MessageProfileBox from "../MessageProfileBox/MessageProfileBox";
+import dark from "../MessageBoxBackground/messageBackgroundDark.svg";
 
-function MessageBox({ messages, setMessages, backgroung, setBackground }) {
+function MessageBox({ messages, setMessages, backgroung, onClick }) {
   return (
     <div className={style.messageBoxContainer}>
       <div className={style.messageBoxHeaderContainer}>
         <h3 className={style.messageBoxHeader}>CHAT PREVIEW</h3>
-        <FaMoon className={style.messageBoxIcon} />
+        <button className={style.messageBoxIcon}>
+          {backgroung === dark ? (
+            <FaMoon onClick={onClick} />
+          ) : (
+            <FaSun onClick={onClick} />
+          )}
+        </button>
       </div>
       <MessageProfileBox />
       <MessageBoxBackground
         messages={messages}
         setMessages={setMessages}
-        backgroung={backgroung}
+        background={backgroung}
       />
     </div>
   );

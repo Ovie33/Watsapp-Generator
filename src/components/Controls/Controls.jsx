@@ -19,8 +19,8 @@ function Controls({ setWhoIsToSend, whoIsToSend, setMessages }) {
     setInputText("");
   };
   const Display = () => {
-    setDisplay(() => {
-      if (display === "none") {
+    setDisplay((prevDisplay) => {
+      if (prevDisplay === "none") {
         setDisplay("");
       } else {
         setDisplay("none");

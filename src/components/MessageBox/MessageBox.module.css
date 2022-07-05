@@ -22,6 +22,18 @@
 }
 
 .messageBoxIcon {
+  all: unset;
   cursor: pointer;
   width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .messageBoxContainer {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    /* overflow: scroll; */
+  }
 }
